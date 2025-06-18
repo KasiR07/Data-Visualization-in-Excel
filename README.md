@@ -29,4 +29,14 @@ Sometimes, there might be other variables eg: When we are selecting the 'amazon'
 # Filter function
 This is used to filter the values in the table such that we can use them accordingly. For example, if we are given value (eg:400,000) and we want to classify all the values greater than that, then we can write it as =filter(<table size>,<value range>, <condition>) ie. =filter(B5:C14, C5:C14 > C2) where C2 cell contains the given value. As we change the value in C2, the table changes accordingly.
 
+# Lookups Functions
+As the name suggests, we are basically looking for the value in the table and the syntax is =xlookup(<input cell>, <range to find the input>, <value range of input cell) . So if the input value is given in cell H4 as sai, we are searching for his commisiion, then: =xlookup(H4, F3:F24, E3:E24) which gives out the commission of Sai. As we change the input value, that value also changes.
+
+## Diff between Vlookups, Hlookups and Xlookups
+
+# Index and Match functions
+These are two seperate functions that are used to analyze both the rows and coulmns to dynamically find out data. First the index() command is used to select the whole data folloed by match() command for specific constraints. 0 is used to indicate the exact precise value whereas 1 indicates . Hence, the syntax will be index(all values, match(given input, all input values, 0), match(given input 2, all input values, 0))
+
+
+
 
