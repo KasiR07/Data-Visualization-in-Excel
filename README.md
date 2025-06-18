@@ -123,6 +123,26 @@ The syntax is =left(<cell number>, <no.of characters to print>) to select the ch
 - explaination: As the name suggests, we are basically looking for the value in the table and the syntax is =xlookup(<input cell>, <range to find the input>, <value range of input cell) . So if the input value is given in cell H4 as sai, we are searching for his commisiion, then: =xlookup(H4, F3:F24, E3:E24) which gives out the commission of Sai. As we change the input value, that value also changes.
 
 
+## ⚖️ TRUE vs FALSE in VLOOKUP
+
+### `=VLOOKUP(lookup_value, table_array, col_index_num, [range_lookup])`
+
+- **`TRUE`** *(or omitted)*:
+  - **Approximate match**
+  - First column must be **sorted ascending**
+  - Returns closest lower match if exact not found
+
+- **`FALSE`**:
+  - **Exact match**
+  - Returns **#N/A** if no exact match
+
+### Example:
+```excel
+=VLOOKUP(85, A2:B10, 2, TRUE)
+```
+
+📌 Use `TRUE` for ranges (grades, tax slabs) and `FALSE` for exact lookups (IDs, names).
+
 ---
 
 ## 🧠 INDEX + MATCH Combo
